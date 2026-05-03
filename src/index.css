@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+  --bg-cream: #F9F8F3;
+  --bg-dark: #1A1A1A;
+  --gold-primary: #C5A059;
+  --gold-light: #D4B67F;
+  --text-dark: #1A1A1A;
+  --text-light: #F9F8F3;
+  --text-muted: #666666;
+  --border-gold: rgba(197, 160, 89, 0.3);
+  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --max-width: 1200px;
+}
+
+[data-theme='dark'] {
+  --bg-cream: #1A1A1A;
+  --text-dark: #F9F8F3;
+  --text-muted: #A0A0A0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.5s var(--transition-smooth), color 0.5s var(--transition-smooth);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .serif {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 100px 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  transition: all 0.3s var(--transition-smooth);
+}
+
+.btn-gold {
+  background-color: var(--gold-primary);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  background-color: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(197, 160, 89, 0.2);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s var(--transition-smooth), transform 1s var(--transition-smooth);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --max-width: 900px;
+  }
+  section {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+  section {
+    padding: 60px 0;
+  }
+  .container {
+    padding: 0 1.5rem;
+  }
+  h1 { font-size: 3rem !important; }
+  h2 { font-size: 2.2rem !important; }
+  h3 { font-size: 1.8rem !important; }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 13px;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+}
+
