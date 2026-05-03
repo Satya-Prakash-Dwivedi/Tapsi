@@ -212,18 +212,27 @@ END:VCALENDAR`;
         }
         @media (max-width: 1024px) {
           .hero-title { font-size: 4.5rem; }
-          .hands-frame-premium { width: 400px; height: 500px; }
+          .hands-frame-premium { width: 450px; height: 500px; }
         }
         @media (max-width: 768px) {
+          .hero-section { padding-top: 100px; }
           .hero-container {
             flex-direction: column-reverse;
             text-align: center;
-            gap: 3rem;
+            gap: 2rem;
           }
           .hero-left { text-align: center; }
-          .hero-title { font-size: 3.5rem; }
-          .hands-frame-premium { width: 100%; max-width: 400px; height: 500px; margin: 0 auto; }
-          .hero-divider { margin: 0 auto 2rem; }
+          .hero-title { font-size: 3.5rem; margin-bottom: 1.5rem; }
+          .hands-frame-premium { 
+            width: 90%; 
+            max-width: 320px; 
+            height: 400px; 
+            border-radius: 60px;
+            margin: 0 auto; 
+          }
+          .hero-divider { margin: 0 auto 1.5rem; }
+          .hero-date { font-size: 2rem; }
+          .hero-venue { margin-bottom: 2rem; }
         }
       `}} />
     </section>

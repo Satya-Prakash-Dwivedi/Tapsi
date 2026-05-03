@@ -223,21 +223,20 @@ const Timeline = () => {
           border-radius: 50%;
         }
         @media (max-width: 768px) {
-          .timeline-base-line {
-            left: 30px;
-          }
+          .timeline-section { padding: 80px 0; }
+          .section-title { font-size: 2.5rem; margin-bottom: 3rem; }
+          .timeline-base-line { left: 30px; }
+          .timeline-items { gap: 3rem; }
           .timeline-card {
-            width: 100%;
-            padding-left: 70px !important;
+            width: 100% !important;
+            padding-left: 60px !important;
             padding-right: 0 !important;
-            justify-content: flex-start !important;
-            transform: translateX(30px) !important;
+            text-align: left !important;
           }
-          .timeline-node {
-            left: 18px !important;
+          .timeline-card.left, .timeline-card.right {
+            justify-content: flex-start;
           }
           .card-content {
-            max-width: 100%;
           }
         }
       `}} />
